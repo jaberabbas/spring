@@ -1,4 +1,4 @@
-package org.batch;
+package org.batch.config;
 
 import javax.sql.DataSource;
 

@@ -1,4 +1,4 @@
-package org.batch;
+package org.batch.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,9 +11,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.Profile;
 
 @Profile("spring")
-public class App {
+public class AppBatch {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AppBatch.class);
 
     public static void main(final String[] args) {
         // Spring Java config
@@ -27,8 +27,8 @@ public class App {
         // ApplicationContext context = new ClassPathXmlApplicationContext("spring-batch-intro.xml");
 
         runJob(context, "firstBatchJob");
-        runJob(context, "skippingBatchJob");//Similar but it has validation. It uses invalid input file. If not valid, it stops and throws exception
-        runJob(context, "skipPolicyBatchJob");//Similar but it has policy validation. It uses invalid input file. If not valid, it stops and throws exception
+        //runJob(context, "skippingBatchJob");//Similar but it has validation. It uses invalid input file. If not valid, it stops and throws exception
+        //runJob(context, "skipPolicyBatchJob");//Similar but it has policy validation. It uses invalid input file. If not valid, it stops and throws exception
     }
 
     private static void runJob(AnnotationConfigApplicationContext context, String batchJobName) {
