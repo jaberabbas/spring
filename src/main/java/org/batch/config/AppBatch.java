@@ -28,7 +28,7 @@ public class AppBatch {
 
         runJob(context, "firstBatchJob");
         //runJob(context, "skippingBatchJob");//Similar but it has validation. It uses invalid input file. If not valid, it stops and throws exception
-        //runJob(context, "skipPolicyBatchJob");//Similar but it has policy validation. It uses invalid input file. If not valid, it stops and throws exception
+        //runJob(context, "skipPolicyBatchJob");//Similar, but it has policy validation. It uses invalid input file. If not valid, it stops and throws exception
     }
 
     private static void runJob(AnnotationConfigApplicationContext context, String batchJobName) {
